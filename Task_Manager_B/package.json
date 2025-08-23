@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node --watch Main/Server.js"
+    "start": "node --watch ../Task_Manager_B/Server.js"
   },
   "keywords": [],
   "author": "",

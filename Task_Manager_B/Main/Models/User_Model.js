@@ -4,8 +4,7 @@ import dotenv from "dotenv";
 dotenv.config({ path: "../.env" });
 const mongo = process.env.MONGO;
 export function connectToMongo() {
-  mongoose
-    .connect(mongo)
+  mongoose.connect(mongo)
     .then(() => {
       console.log("mongo is successfully connected");
     })
