@@ -12,7 +12,10 @@ const port = process.env.PORT || 8081;
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: [
+    "http://localhost:5173",               // local dev
+    "https://task-manager-frontend-7mk5.vercel.app"  // vercel deploy
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
