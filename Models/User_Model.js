@@ -1,7 +1,7 @@
 import mongoose,{Types} from "mongoose";
 import { Schema } from "mongoose";
 import dotenv from "dotenv";
-dotenv.config({ path: "../.env" });
+dotenv.config({ "path": "./.env" });
 const mongo = process.env.MONGO;
 export function connectToMongo() {
   mongoose.connect(mongo)
@@ -9,7 +9,7 @@ export function connectToMongo() {
       console.log("mongo is successfully connected");
     })
     .catch((err) => {
-      console.log("something went wronG", err);
+      console.log("something went wrong", err);
     });
 }
 

@@ -1,11 +1,11 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import  Auth_router from '../Task_Manager_B/Main/Routes/Auth_Router.js';
-import { connectToMongo } from '../Task_Manager_B/Main/Models/User_Model.js';
+import  Auth_router from "./Routes/Auth_Router.js";
+import { connectToMongo } from './Models/User_Model.js';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import Task_router from "../Task_Manager_B/Main/Routes/Task_Router.js";
-dotenv.config();
+import Task_router from "./Routes/Task_Router.js";
+dotenv.config({ "path": "./.env" });
 connectToMongo();
 
 const port = process.env.PORT || 8081;
