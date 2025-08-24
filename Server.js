@@ -26,7 +26,7 @@ const app = express();
 app.use(cors({
   origin: {
     "http://localhost:5173": true,
-    "https://task-manager-frontend-7mk5-3ybev6awq.vercel.app": true
+    "https://task-manager-frontend-7mk5.vercel.app": true
   },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
