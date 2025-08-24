@@ -24,7 +24,7 @@ export const Otpverify = async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
+      sameSite: "none",
     });
     return res.status(200).json({ message: "OTP verified successfully", user: { id: user._id, email: user.email } });
   } catch (err) {
