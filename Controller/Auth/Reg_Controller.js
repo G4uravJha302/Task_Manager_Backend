@@ -20,9 +20,11 @@ export const signup = async (req, res) => {
       otpVerified: otpExpires,
       
     });
+    console.log('OTP generated:', otp);
 
     await newUser.save();
     await Sendmail(`Your OTP is ${otp}`, email);
+    console.log('OTP sent to email:', email);
 
     res.status(200).json({ message: "OTP sent to your email" });
   } catch (err) {
